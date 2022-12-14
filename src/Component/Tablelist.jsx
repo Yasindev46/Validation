@@ -2,7 +2,7 @@ import React, { useState,useEffect } from "react";
 import { DataGrid, GridRowsProp, GridColDef, } from "@mui/x-data-grid";
 import {Box, Button} from "@mui/material"
 
-export const Tablelist=({alldata,setShow})=> {
+export const Tablelist=({alldata,handleShow})=> {
     const [data,setData]=useState(alldata)
     console.log("===>data",data)
 
@@ -13,15 +13,16 @@ export const Tablelist=({alldata,setShow})=> {
             lname:item.lastName,
             contact:item.contact,
             address:item.address,
-            
+            gender:item.gender,
         } 
     })
     const columns= [
       { field: "id", headerName: "Sl No", width: 100, headerClassName: 'super-app-theme--header' },
       { field: "fname", headerName: "First Name", width: 150,headerClassName: 'super-app-theme--header' }, 
-      { field: "lname", headerName: "Last Name", width: 250,headerClassName: 'super-app-theme--header' }, 
-      { field: "contact", headerName: "Contact", width: 250,headerClassName: 'super-app-theme--header' }, 
+      { field: "lname", headerName: "Last Name", width: 150,headerClassName: 'super-app-theme--header' }, 
+      { field: "contact", headerName: "Contact", width: 150,headerClassName: 'super-app-theme--header' }, 
       { field: "address", headerName: "Address", width: 250,headerClassName: 'super-app-theme--header' }, 
+      { field: "gender", headerName: "Gender", width: 250,headerClassName: 'super-app-theme--header' }, 
      ];
 
   return (
@@ -38,7 +39,8 @@ export const Tablelist=({alldata,setShow})=> {
             fontWeight:'bolder'
           },
         }} />
-    <Button variant="contained" ml={35} onClick={()=>setShow(false)}>Back</Button>
+    {/* <Button variant="contained" ml={35} onClick={()=>setShow(false)}>Back</Button> */}
+    <Button variant="contained" ml={35} onClick={handleShow}>Back</Button>
     </Box>
   );
 }

@@ -1,12 +1,12 @@
 
 import "./App.css";
-import { Signupf } from "./Tabassum/Signupf";
+import { Registration } from "./Component/Registration";
 
 function App() {
   
   return (
     <div>
-        <Signupf/>
+        <Registration/>
     </div>
   );
 }
