@@ -44,9 +44,9 @@ export const Registration = () => {
     <div>
     <Formik
       initialValues={{
-        firstName: "Sameer",
-        lastName: "Shaikh",
-        email: "sameer@gmail.com",
+        firstName: "Yasin",
+        lastName: "Mulla",
+        email: "Yasin@gmail.com",
         contact: "1234567890",
         password: "123abc",
         confirmPassword: "123abc",
