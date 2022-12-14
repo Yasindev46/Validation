@@ -3,7 +3,7 @@ import { Formik, Form } from "formik";
 import { InputFields } from "./InputFields";
 import * as Yup from "yup";
 import { Registeredcopy } from "./Registeredcopy";
-import { Button, Grid } from "@mui/material";
+import { Button, Grid, TextField } from "@mui/material";
 import Alldata from "./Alldata";
 import { Tablelist } from "./Tablelist";
 
@@ -65,20 +65,20 @@ export const Registration = () => {
             display: show?"none":"flex",
             justifyContent: "center",
             alignItems: "center",
+            
           }}
         >
           <Form >
-          {/* <Form> */}
-            <Grid container  spacing={3} mt={5} ml={55}>
-          <h1>Registration Form</h1>
+           <Grid container  spacing={3} mt={2} ml={55}>
+            <h1>Registration Form</h1>
             <InputFields label="First Name" name="firstName" type="text" />
             <InputFields label="Last Name" name="lastName" type="text" />
             <InputFields label="Email" name="email" type="email" />
             <InputFields label="Contact" name="contact" type="" />
             <div style={{margin:"15px 0px"}}>
             <label style={{fontWeight:"bold",marginRight:"15px"}}>Gender</label>
-            <input type="radio" value="male"  name="gender"  onChange={(e)=>setGender(e.target.value)}/>:Male
-            <input type="radio" value="female" name="gender"  onChange={(e)=>setGender(e.target.value)}/>:Female
+            <input type="radio" value="Male"  name="gender"  onChange={(e)=>setGender(e.target.value)}/>:Male
+            <input type="radio" value="Female" name="gender"  onChange={(e)=>setGender(e.target.value)}/>:Female
             </div>
             <InputFields label="Password" name="password" type="password" />
             <InputFields label="Confirm Password" name="confirmPassword" type="password"/>

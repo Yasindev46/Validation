@@ -14,6 +14,7 @@ export const Tablelist=({alldata,handleShow})=> {
             contact:item.contact,
             address:item.address,
             gender:item.gender,
+            email:item.email
         } 
     })
     const columns= [
@@ -21,13 +22,14 @@ export const Tablelist=({alldata,handleShow})=> {
       { field: "fname", headerName: "First Name", width: 150,headerClassName: 'super-app-theme--header' }, 
       { field: "lname", headerName: "Last Name", width: 150,headerClassName: 'super-app-theme--header' }, 
       { field: "contact", headerName: "Contact", width: 150,headerClassName: 'super-app-theme--header' }, 
+      { field: "gender", headerName: "Gender", width: 150,headerClassName: 'super-app-theme--header' }, 
+      { field: "email", headerName: "Email", width: 250,headerClassName: 'super-app-theme--header' }, 
       { field: "address", headerName: "Address", width: 250,headerClassName: 'super-app-theme--header' }, 
-      { field: "gender", headerName: "Gender", width: 250,headerClassName: 'super-app-theme--header' }, 
      ];
 
   return (
     <Box sx={{  height: 500,
-      width: '70%','& .super-app-theme--header': {backgroundColor: 'purple',fontSize:"15px",color:"white"}}}  ml={25}>
+      width: '85%','& .super-app-theme--header': {backgroundColor: 'purple',fontSize:"15px",color:"white"}}}  ml={12}>
         <h1 style={{textAlign:"center"}}>Employee Details</h1>
       <DataGrid rows={rowdata} columns={columns}  sx={{
           boxShadow: 5,
